@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body onload="hideOnLoad()">
+    <form name="risk-tolerance-form" class="width-100">
+        <div class="container-fluid master-container width-100 main-content create-proposal-mod">
+            <div class="page-header">
+                <h1>
+                    Risk Tolerance Assessment
+                </h1>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Number of Clients
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="radio-container block">&nbsp;&nbsp;One
+                            <input type="radio" name="no-clients" value="1" onchange="noClientSelected()"><span class="radio-button"></span>
+                        </label>
+                        <label class="radio-container block">&nbsp;&nbsp;Two
+                            <input type="radio" name="no-clients" value="2" onchange="noClientSelected()"><span class="radio-button"></span>
+                        </label>
+                    </div>
+                    <p>
+                        To calculate your risk tolerance, please choose the number of clients to assess and select one answer from each of the following questions.
+                    </p>
+                    <p class="second-client" hidden>
+                        Please fill out responses for Client 1 in the left circle and Client 2 in the right circle for each choice, as shown below.
+                    </p>
+                    <table class="table-even second-client" hidden>
+                        <tr class="text-center">
+                            <td colspan="2">Client</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="border-right">
+                                <label class="radio-container">
+                                    <input type="radio" onclick="return false;" checked><span class="radio-button"></span>
+                                </label>
+                            </td>
+                            <td class="border-left">
+                                <label class="radio-container">
+                                    <input type="radio" onclick="return false;" checked><span class="radio-button"></span>
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <noscript class="text-error">This form requires JavaScript to function. Please enable it in your browser settings to continue.</noscript>
+                </div>
+            </div>
+            <div class="assessment" hidden>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            1) Which of the following best describes your primary investment objective?
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div class="inline-block">
+                                <div class="col-3">
+                                    <p class="container-first-padding inline-block width-100">
+                                        <b>Wealth Accumulation</b><br>Emphasis on continued capital appreciation in accordance with your overall risk tolerance.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="container-middle-padding inline-block width-100">
+                                        <b>Wealth Maintenance</b><br>Emphasis on maintaining a desired lifestyle or level of financial security.
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="container-last-padding inline-block width-100">
+                                        <b>Wealth Distribution</b><br>Emphasis on using wealth for living expenses.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-3">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-3">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-1" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-2" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-3">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-1" value="1"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-obj-2" value="1"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            2) Approximately how many years do you expect to continue to invest your assets in the stock market?
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-5 text-center text-bold">0-3 Years</span>
+                                <span class="col-5 text-center text-bold">3-5 Years</span>
+                                <span class="col-5 text-center text-bold">6-10 Years</span>
+                                <span class="col-5 text-center text-bold">11-15 Years</span>
+                                <span class="col-5 text-center text-bold">15+ Years</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-1" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-2" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-1" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-2" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-1" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-2" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-1" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="invest-years-2" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            3) Imagine that you are investing $100,000 and can choose from the five hypothetical portfolios shown in the table below.
+                            Assuming there is an equal chance of achieving either result (gain or loss), indicate which portfolio represents the maximum risk/return trade-off you would be willing to accept.
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <p>The dollar values for each portfolio represent two possible returns after one year.</p>
+                            <table class="table-full width-100">
+                                <th class="second-client"></th>
+                                <th colspan="2"></th>
+                                <th>Possible Gain</th>
+                                <th>Possible Loss</th>
+                                <tr>
+                                    <td class="text-right border-right radio-one">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-1" value="12"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="border-left second-client radio-two">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-2" value="12"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-bold">Portfolio&nbsp;A</td>
+                                    <td class="text-center">$60,000</td>
+                                    <td class="text-center">-$45,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right border-right radio-one">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-1" value="9"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="border-left second-client radio-two">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-2" value="9"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-bold">Portfolio&nbsp;B</td>
+                                    <td class="text-center">$50,000</td>
+                                    <td class="text-center">-$35,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right border-right radio-one">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-1" value="6"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="border-left second-client radio-two">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-2" value="6"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-bold">Portfolio&nbsp;C</td>
+                                    <td class="text-center">$35,000</td>
+                                    <td class="text-center">-$25,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right border-right radio-one">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-1" value="3"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="border-left second-client radio-two">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-2" value="3"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-bold">Portfolio&nbsp;D</td>
+                                    <td class="text-center">$25,000</td>
+                                    <td class="text-center">-$15,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right border-right radio-one">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-1" value="0"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="border-left second-client radio-two">
+                                        <label class="radio-container">
+                                            <input type="radio" name="gain-loss-2" value="0"><span class="radio-button"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-bold">Portfolio&nbsp;E</td>
+                                    <td class="text-center">$15,000</td>
+                                    <td class="text-center">-$5,000</td>
+                                </tr>
+                            </table>
+                            <p><i><small>The maximum gain or loss on an investment is impossible to predict. The ranges shown in the chart are hypothetical and are designed solely to gauge an investor's tolerance for risk.</small></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            4) Please indicate the level of risk with which you are most comfortable:
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-6 text-bold text-center">Low</span>
+                                <span class="col-2-3rd text-bold text-center">Medium</span>
+                                <span class="col-6 text-bold text-center">High&nbsp;</span>
+                            </div>
+                            <div>
+                                <span class="col-6 text-center text-bold">0</span>
+                                <span class="col-6 text-center text-bold">1</span>
+                                <span class="col-6 text-center text-bold">2</span>
+                                <span class="col-6 text-center text-bold">3&nbsp;</span>
+                                <span class="col-6 text-center text-bold">4&nbsp;</span>
+                                <span class="col-6 text-center text-bold">5&nbsp;</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-6 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-1" value="20"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="risk-level-2" value="20"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            5) How long are you prepared to wait for your account to return to its original value after a down market?
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-5 text-center text-bold"><18 Months</span>
+                                <span class="col-5 text-center text-bold">18-24 Months</span>
+                                <span class="col-5 text-center text-bold">2-3 Years</span>
+                                <span class="col-5 text-center text-bold">3-5 Years</span>
+                                <span class="col-5 text-center text-bold">5+ Years</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-1" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-2" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-1" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-2" value="4"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-1" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-2" value="8"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-1" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="restore-wait-2" value="16"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            6) My current income and future income (salary, pension, etc.) is:
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-5 text-center text-bold">Very<br>Secure / Stable</span>
+                                <span class="col-5 text-center text-bold">Mostly<br>Secure / Stable</span>
+                                <span class="col-5 text-center text-bold"><br>Secure / Stable</span>
+                                <span class="col-5 text-center text-bold">Somewhat<br>Secure / Stable</span>
+                                <span class="col-5 text-center text-bold">Not<br>Secure / Stable</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-1" value="9"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-2" value="9"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-1" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-2" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-1" value="3"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-2" value="3"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-1" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="income-security-2" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            7) How able are you to handle financial emergencies with assets outside of your investment account(s)?
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-5 text-center text-bold">Very Able</span>
+                                <span class="col-5 text-center text-bold">Mostly Able</span>
+                                <span class="col-5 text-center text-bold">Able</span>
+                                <span class="col-5 text-center text-bold">Somewhat Able</span>
+                                <span class="col-5 text-center text-bold">Not Able</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-1" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-2" value="12"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-1" value="9"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-2" value="9"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-1" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-2" value="6"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-1" value="3"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-2" value="3"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-5 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-1" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="emergency-assets-2" value="0"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            8) Is tax efficiency within the portfolio a high priority? (Non-qualified accounts only)
+                        </h3>
+                    </div>
+                    <div class="panel-body parent-container">
+                        <div class="form-group">
+                            <div>
+                                <span class="col-2 text-center text-bold">Yes</span>
+                                <span class="col-2 text-center text-bold">No / Not Applicable</span>
+                            </div>
+                            <div class="inline-block">
+                                <table class="table-even col-2 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="tax-efficiency-1" value="yes"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="tax-efficiency-2" value="yes"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table-even col-2 table-padded">
+                                    <tr>
+                                        <td class="text-right border-right radio-one">
+                                            <label class="radio-container">
+                                                <input type="radio" name="tax-efficiency-1" value="no"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                        <td class="border-left second-client radio-two">
+                                            <label class="radio-container">
+                                                <input type="radio" name="tax-efficiency-2" value="no"><span class="radio-button"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="results" class="container-results" hidden>
+                    <div class="inline-block width-100">
+                        <div class="width-100">
+                            <div class="panel-body">
+                                <h3 class="padded-top">Your Risk Assessment</h3>
+                                <p>
+                                    To determine your specific risk assessment, the point values associated with each of your choices are added together. A total score of 100 represents the highest tolerance for risk.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="width-100">
+                            <div class="panel-body">
+                                <table class="table-even table-full width-100">
+                                    <th colspan="3">Client 1</th>
+                                    <th class="second-client" colspan="3">Client 2</th>
+                                    <tr>
+                                        <td id="client-1-total" class="text-center" colspan="3"></td>
+                                        <td id="client-2-total" class="text-center second-client" colspan="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="client-1-risk" class="text-center" colspan="3"></td>
+                                        <td id="client-2-risk" class="text-center second-client" colspan="3"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="width-100">
+                            <div class="panel-body">
+                                <h3 class="padded-top">Suitable Models</h3>
+                                <p>
+                                    Based on your risk assessment answers, below are the recommended models derived from your total points. The scoring from this form differs from the riskalyze scoring system and should not be interpreted as the same.
+                                </p>
+                                <div class="width-100">
+                                    <table id="models-table-1" class="table-padded table-colored width-100">
+                                        <tr class="table-row-colored">
+                                            <th id="models-table-1-header" colspan="5"></th>
+                                        </tr>
+                                        <tr class="table-row-colored">
+                                            <td class="text-bold">Model&nbsp;</td>
+                                            <td class="text-bold">Min.&nbsp;</td>
+                                            <td class="text-bold">Portfolio Objective&nbsp;</td>
+                                            <td class="text-bold">Riskalyze&nbsp;</td>
+                                            <td class="text-bold">Fact Sheet</td>
+                                        </tr>
+                                    </table>
+                                    <table id="models-table-2" class="table-padded table-colored width-100" hidden>
+                                        <tr class="table-row-colored">
+                                            <th id="models-table-2-header" colspan="5"></th>
+                                        </tr>
+                                        <tr class="table-row-colored">
+                                            <td class="text-bold">Model&nbsp;</td>
+                                            <td class="text-bold">Min.&nbsp;</td>
+                                            <td class="text-bold">Portfolio Objective&nbsp;</td>
+                                            <td class="text-bold">Riskalyze&nbsp;</td>
+                                            <td class="text-bold">Fact Sheet</td>
+                                        </tr>
+                                    </table>
+                                    <p id="models-key" class="width-100" hidden>
+                                        <span class="text-large">*</span> <small><i>Accounts under $25k will be implemented using a limited number of asset classes in order to both maintain the investment objectives of the portfolio as well as to maximize trading cost efficiencies.</i></small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-2">
+                        <span id="select-error" class="text-error text-bold" hidden>Please make a selection for each question.</span>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" id="submit-button" class="btn btn-primary btn-lg pull-right" onclick="validateForm();">Submit Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<script>
+
+    function hideOnLoad() {
+        hideElements(document.getElementsByClassName("assessment"), true);
+        hideElements(document.getElementsByClassName("second-client"), true);
+    }
+
+    function hideElements(elements, hide) {
+        for (let i = 0; i < elements.length; i++) {
+            if (hide) {
+                elements[i].setAttribute("hidden", true);
+            }
+            else {
+                elements[i].removeAttribute("hidden");
+            }
+        }
+    }
+
+    function noClientSelected() {
+        hideElements(document.getElementsByClassName("assessment"), false);
+        if (document.forms["risk-tolerance-form"]["no-clients"].value === "2") {
+            hideElements(document.getElementsByClassName("second-client"), false);
+            setRadioButtonClasses(document.getElementsByClassName("radio-one"), false);
+        }
+        else {
+            hideElements(document.getElementsByClassName("second-client"), true);
+            setRadioButtonClasses(document.getElementsByClassName("radio-one"), true);
+        }
+    }
+
+    function setRadioButtonClasses(elements, oneClient) {
+        for (let i = 0; i < elements.length; i++) {
+            if (oneClient) {
+                elements[i].classList.remove("text-right");
+                elements[i].classList.remove("border-right");
+                elements[i].classList.add("text-center");
+            }
+            else {
+                elements[i].classList.remove("text-center");
+                elements[i].classList.add("text-right");
+                elements[i].classList.add("border-right");
+            }
+        }
+    }
+
+    function validateForm() {
+        const form = document.forms["risk-tolerance-form"];
+        let clientCount = form["no-clients"].value;
+        if (!clientCount) {
+            return false;
+        }
+        let formFields = getFormFields(1);
+        if (clientCount === "2") {
+            formFields = formFields.concat(getFormFields(2));
+        }
+
+        let total1 = 0;
+        let total2 = 0;
+        let hasError = false;
+        let isTaxEfficient1 = false;
+        let isTaxEfficient2 = false;
+        formFields.forEach(field => {
+            let value = form[field].value;
+            if (!value) {
+                hasError = true;
+            }
+            else {
+                if (field.endsWith("1")) {
+                    if (field.startsWith("tax-efficiency")) {
+                        if (value === "yes") {
+                            isTaxEfficient1 = true;
+                        }
+                    }
+                    else {
+                        total1 += parseInt(value);
+                    }
+                }
+                else if (field.endsWith("2")) {
+                    if (field.startsWith("tax-efficiency")) {
+                        if (value === "yes") {
+                            isTaxEfficient2 = true;
+                        }
+                    }
+                    else {
+                        total2 += parseInt(value);
+                    }
+                }
+            }
+        });
+        if (hasError) {
+            document.getElementById("select-error").removeAttribute("hidden");
+            return false;
+        }
+        else {
+            document.getElementById("select-error").setAttribute("hidden", true);
+        }
+
+        let risk1 = getRiskPlacement(total1);
+        document.getElementById("client-1-total").innerText = "Total Score: " + total1;
+        document.getElementById("client-1-risk").innerText = "Risk Level: " + risk1;
+        if (clientCount === "2") {
+            let risk2 = getRiskPlacement(total2);
+            document.getElementById("client-2-total").innerText = "Total Score: " + total2;
+            document.getElementById("client-2-risk").innerText = "Risk Level: " + risk2;
+            populateModelsTables(risk1, isTaxEfficient1, risk2, isTaxEfficient2);
+        }
+        else {
+            populateModelsTables(risk1, isTaxEfficient1);
+        }
+
+        document.getElementById("results").removeAttribute("hidden");
+        document.getElementById("submit-button").innerHTML = "Resubmit Assessment";
+    }
+
+    function getFormFields(client) {
+        return [
+            "invest-obj-" + client,
+            "invest-years-" + client,
+            "gain-loss-" + client,
+            "risk-level-" + client,
+            "restore-wait-" + client,
+            "income-security-" + client,
+            "emergency-assets-" + client,
+            "tax-efficiency-" + client,
+        ];
+    }
+
+    function getRiskPlacement(total) {
+        switch (true) {
+            case (total <= 0) :
+                return "";
+            case (total <= 17) :
+                return "Very Risk Averse";
+            case (total <= 34) :
+                return "Conservative";
+            case (total <= 50) :
+                return "Moderate";
+            case (total <= 67) :
+                return "Balanced";
+            case (total <= 84) :
+                return "Growth";
+            case (total <= 100) :
+                return "Aggressive";
+            default :
+                return "";
+        }
+    }
+
+    function populateModelsTables(risk1, isTaxEfficient1, risk2 = null, isTaxEfficient2 = null) {
+        insertModelOptions("models-table-1", getModels(risk1), isTaxEfficient1);
+        if (risk1 === "Very Risk Averse") {
+            risk1 = "Conservative"
+        }
+        if (risk2 === "Very Risk Averse") {
+            risk2 = "Conservative"
+        }
+
+        document.getElementById("models-table-1-header").innerHTML = "Client 1 (" + risk1 + ")";
+        document.getElementById("models-table-2").setAttribute("hidden", true);
+        if (risk2) {
+            if (risk1 === risk2 && isTaxEfficient1 === isTaxEfficient2) {
+                document.getElementById("models-table-1-header").innerHTML = "Client 1 & Client 2 (" + risk1 + ")";
+            }
+            else {
+                insertModelOptions("models-table-2", getModels(risk2), isTaxEfficient2);
+                document.getElementById("models-table-2-header").innerHTML = "Client 2 (" + risk2 + ")";
+                document.getElementById("models-table-2").removeAttribute("hidden");
+            }
+        }
+
+        if (risk1 === "Conservative" || risk1 === "Moderate" || risk2 === "Conservative" || risk2 === "Moderate") {
+            document.getElementById("models-key").removeAttribute("hidden");
+        }
+        else {
+            document.getElementById("models-key").setAttribute("hidden", true);
+        }
+
+    }
+
+    function insertModelOptions(tableId, models, isTaxEfficient) {
+        let rows = models.model.length;
+        let columns = Object.keys(models).length;
+
+        let table = document.getElementById(tableId);
+        while (table.rows.length > 2) {
+            table.deleteRow(-1);
+        }
+
+        const columnNames = [
+            "model",
+            "minimum",
+            "objective",
+            "riskalyze",
+            "url",
+        ];
+        for (let r = 0; r < rows; r++) {
+            if (!isTaxEfficient || (isTaxEfficient && !models[columnNames[0]][r].startsWith("Cabana"))) {
+                let row = table.insertRow(-1);
+                for (let c = 0; c < columns; c++) {
+                    let cell = row.insertCell(-1);
+                    if (c === columnNames.length - 1) {
+                        cell.innerHTML = "<a href='" + models[columnNames[c]][r] + "' target='_blank'>Learn More</a>";
+                    }
+                    else {
+                        cell.innerHTML = models[columnNames[c]][r];
+                    }
+                }
+            }
+        }
+    }
+
+    function getModels(risk) {
+        switch (risk) {
+            case null :
+                return null;
+            case "Very Risk Averse" :
+            case "Conservative" :
+                return {
+                    model: [
+                        "Foundations Strategic Conservative&nbsp;<small><sup>*</sup></small>",
+                        "Foundations Flex Conservative",
+                        "Foundations Economic Trends Conservative",
+                        "Cabana Target Drawdown Income 5",
+                    ],
+                    minimum: [
+                        "25k",
+                        "50k",
+                        "25k",
+                        "10k",
+                    ],
+                    objective: [
+                        "Income & Total Return",
+                        "Tactical Income with Accumulation",
+                        "Low Trade Volume 20/80 Portfolio",
+                        "Seeks Limited Volatility Range of 5%",
+                    ],
+                    riskalyze: [
+                        "34",
+                        "22",
+                        "30",
+                        "26",
+                    ],
+                    url: [
+                        "https://www.fiwealth.com/s/FSC-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FFC-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FETC-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/Cabana-Target-Drawdown-Professional-5-Fact-Sheet_July-2020.pdf.pdf",
+                    ]
+                };
+            case "Moderate" :
+                return {
+                    model: [
+                        "Foundations Core 40",
+                        "Foundations Smart Core 40",
+                        "Foundations Strategic Moderate&nbsp;<small><sup>*</sup></small>",
+                        "Foundations Flex Moderate",
+                        "Foundations Economic Trends Moderate",
+                        "Cabana Target Drawdown 7",
+                    ],
+                    minimum: [
+                        "25k",
+                        "25k",
+                        "25k",
+                        "50k",
+                        "25k",
+                        "10k",
+                    ],
+                    objective: [
+                        "Low Cost Diversified Growth",
+                        "Alpha Seeking Diversified Growth",
+                        "Balanced Growth & Income",
+                        "Tactical Income with Accumulation",
+                        "Low Trade Volume 40/60 Portfolio",
+                        "Seeks Limited Volatility Range of 7%",
+                    ],
+                    riskalyze: [
+                        "44",
+                        "43",
+                        "41",
+                        "24",
+                        "43",
+                        "30",
+                    ],
+                    url: [
+                        "https://www.fiwealth.com/core-series",
+                        "https://www.fiwealth.com/smart-core-series",
+                        "https://www.fiwealth.com/s/FSM-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FFM-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FETM-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/Cabana-Target-Drawdown-Professional-7-Fact-Sheet_July-2020.pdf",
+                    ]
+                };
+            case "Balanced" :
+                return {
+                    model: [
+                        "Foundations Core 60",
+                        "Foundations Smart Core 60",
+                        "Foundations Strategic Balanced",
+                        "Foundations Flex Balanced",
+                        "Foundations Economic Trends Balanced",
+                        "Cabana Target Drawdown 10",
+                    ],
+                    minimum: [
+                        "25k",
+                        "25k",
+                        "25k",
+                        "50k",
+                        "25k",
+                        "10k",
+                    ],
+                    objective: [
+                        "Low Cost Balanced Growth",
+                        "Alpha Seeking Balanced Growth",
+                        "Wealth Accumulation",
+                        "Tactical & Strategic Moderate Growth",
+                        "Low Trade Volume 60/40 Portfolio",
+                        "Seeks Limited Volatility Range of 10%",
+                    ],
+                    riskalyze: [
+                        "56",
+                        "56",
+                        "48",
+                        "28",
+                        "57",
+                        "34",
+                    ],
+                    url: [
+                        "https://www.fiwealth.com/core-series",
+                        "https://www.fiwealth.com/smart-core-series",
+                        "https://www.fiwealth.com/s/FSB-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FFB-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FETB-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/Cabana-Target-Drawdown-Professional-10-Fact-Sheet_July-2020.pdf",
+                    ]
+                };
+            case "Growth" :
+                return {
+                    model: [
+                        "Foundations Core 80",
+                        "Foundations Smart Core 80",
+                        "Foundations Strategic Growth",
+                        "Foundations Flex Growth",
+                        "Foundations Economic Trends Growth",
+                        "Cabana Target Drawdown 13",
+                    ],
+                    minimum: [
+                        "25k",
+                        "25k",
+                        "25k",
+                        "50k",
+                        "25k",
+                        "10k",
+                    ],
+                    objective: [
+                        "Low Cost Growth of Capital",
+                        "Alpha Seeking Growth of Capital",
+                        "Aggressive Growth of Capital",
+                        "Strategic & Tactical Capital Appreciation",
+                        "Low Trade Volume 80/20",
+                        "Seeks Limited Volatility Range of 13%",
+                    ],
+                    riskalyze: [
+                        "69",
+                        "69",
+                        "55",
+                        "32",
+                        "71",
+                        "41",
+                    ],
+                    url: [
+                        "https://www.fiwealth.com/core-series",
+                        "https://www.fiwealth.com/smart-core-series",
+                        "https://www.fiwealth.com/s/FSG-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FFG-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FETG-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/Cabana-Target-Drawdown-Professional-13-Fact-Sheet_July-2020.pdf",
+                    ]
+                };
+            case "Aggressive" :
+                return {
+                    model: [
+                        "Foundations Core 100",
+                        "Foundations Smart Core 100",
+                        "Foundations Strategic Aggressive",
+                        "Foundations Premium Yield",
+                        "Foundations US Sector Rotation",
+                        "Foundations Flex Aggressive",
+                        "Foundations Economic Trends Aggressive",
+                        "Cabana Target Drawdown 16",
+                    ],
+                    minimum: [
+                        "25k",
+                        "25k",
+                        "25k",
+                        "25k",
+                        "25k",
+                        "50k",
+                        "25k",
+                        "10k",
+                    ],
+                    objective: [
+                        "Low Cost Equity Portfolio",
+                        "Alpha Seeking Equity Portfolio",
+                        "Diversified Full Stock Exposure",
+                        "Strong Dividend Paying Equities",
+                        "Domestic Full Stock Exposure",
+                        "Aggressive Wealth Accumulation",
+                        "Low Trade Volume Equity Portfolio",
+                        "Seeks Limited Volatility Range of 16%",
+                    ],
+                    riskalyze: [
+                        "73",
+                        "73",
+                        "63",
+                        "60",
+                        "71",
+                        "37",
+                        "83",
+                        "43",
+                    ],
+                    url: [
+                        "https://www.fiwealth.com/core-series",
+                        "https://www.fiwealth.com/smart-core-series",
+                        "https://www.fiwealth.com/s/FSA-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FPY-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FUS-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FFA-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/FETA-July-Sheets.pdf",
+                        "https://www.fiwealth.com/s/Cabana-Target-Drawdown-Professional-16-Fact-Sheet_July-2020.pdf",
+                    ]
+                };
+        }
+    }
+
+</script>
+
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<style>
+    * {
+        font-family: Roboto, sans-serif;
+    }
+
+    p,
+    p > *,
+    p > * > * {
+        font-family: Raleway, serif !important;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    h1,
+    h3 {
+        orphans: 3;
+        widows: 3;
+        page-break-after: avoid;
+        font-family: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        color: inherit;
+    }
+
+    p {
+        margin: 0 0 11px;
+        word-wrap: break-word;
+    }
+
+    table {
+        border-spacing: 0;
+    }
+
+    hr {
+        width: 95%;
+        margin: auto;
+        border: none;
+        background-color: white;
+        height: 1px;
+    }
+
+    a {
+        color: #f85b07;
+    }
+
+    .table-even {
+        table-layout: fixed;
+    }
+
+    .table-padded {
+        padding: 5px 0 5px 0;
+    }
+
+    .table-full {
+        border-spacing: 0 10px;
+    }
+
+    .table-colored th,
+    .table-row-colored {
+        background-color: inherit !important;
+    }
+
+    .table-colored {
+        margin: 5px;
+    }
+
+    .table-colored tr:nth-child(even) {
+        background-color: #1e5681;
+    }
+
+    .table-colored tr:nth-child(odd) {
+        background-color: #37698f;
+    }
+	
+	.table-colored tr td {
+		font-size: 16px !important;
+	}
+
+    .parent-container {
+        overflow: auto;
+        clear: both;
+    }
+
+    .page-header {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d4dbe0
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+
+    .container-first-padding {
+        padding-right: 10px;
+    }
+
+    .container-middle-padding {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .container-last-padding {
+        padding-left: 10px;
+    }
+
+    .container-results>div {
+        margin-bottom: 20px;
+        background-color: #064474;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        color: AliceBlue;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-error {
+        color: red;
+    }
+
+    .padded-top {
+        padding-top: 10px;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+    tr.padded>td {
+        padding: 0 15px 5px 15px;
+    }
+
+    .text-bold {
+        font-weight: 700
+    }
+
+    .text-large {
+        font-size: 1.5em;
+    }
+
+    .border-left {
+        border-left: 1px solid darkgrey;
+    }
+
+    .border-right {
+        border-right: 1px solid darkgrey;
+    }
+
+    .container,
+    .container-fluid {
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .main-content {
+        margin-top: 10px
+    }
+
+    .col-6,
+    .col-5,
+    .col-3,
+    .col-2,
+    .col-2-3rd {
+        position: relative;
+        min-height: 1px;
+        float: left;
+    }
+
+    .col-6 {
+        width: 16.6666%;
+    }
+
+    .col-5 {
+        width: 20%;
+    }
+
+    .col-3 {
+        width: 33.3333%;
+    }
+
+    .col-2 {
+        width: 50%;
+    }
+
+    .col-2-3rd {
+        width: 66.6666%;
+    }
+
+    .create-proposal-mod {
+        font-size: 1.2em
+    }
+
+    .panel {
+        margin-bottom: 22px;
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .05)
+    }
+
+    .panel-default {
+        border-color: #d3e0e9;
+        background-color: #f9f9f9;
+    }
+
+    .panel-default>.panel-heading {
+        color: #1e3948;
+        background-color: aliceblue;
+        border-color: #d3e0e9
+    }
+
+    .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        margin-bottom: 15px;
+    }
+
+    .panel-body {
+        padding: 0 15px 15px 15px;
+    }
+
+    .panel-title {
+        color: inherit;
+        font-size: 1em;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .btn {
+        font-size: 14px;
+        background-image: none;
+        display: inline-block;
+        margin-bottom: 20px;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .btn-primary {
+        font-weight: 700;
+        color: #fff;
+        background-color: #2196F3;
+        border-color: #0a6ebd
+    }
+
+    .btn-primary:focus {
+        color: #fff;
+        background-color: #2196F3;
+        border-color: #0a6ebd;
+        outline: none;
+    }
+
+    .btn-primary:active,
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #0d8aee;
+        border-color: #0a6ebd;
+    }
+
+    .btn-primary:active:focus,
+    .btn-primary:active:hover {
+        color: #fff;
+        background-color: #0a6ebd;
+        border-color: #081414
+    }
+
+    .btn-lg {
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.3333333;
+        border-radius: 6px
+    }
+
+    .pull-right {
+        float: right !important
+    }
+
+    .block {
+        display: block;
+    }
+
+    .inline-block {
+        display: inline-block;
+    }
+
+    .radio-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 20px;
+        margin: 0 10px 16px 10px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .radio-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #c8c8c8;
+        border-radius: 50%;
+    }
+
+    .radio-container:hover input ~ .radio-button {
+        background-color: #b0b0b0;
+    }
+
+    .radio-container input:checked ~ .radio-button {
+        background-color: #2196F3;
+    }
+
+    .radio-button:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .radio-container input:checked ~ .radio-button:after {
+        display: block;
+    }
+</style>
+
+</html>
